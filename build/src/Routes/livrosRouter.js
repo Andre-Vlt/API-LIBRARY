@@ -5,10 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var LivrosController_1 = __importDefault(require("../Controller/LivrosController"));
-var router = express_1.default.Router();
+var RouterLivros = express_1.default.Router();
 var livrosController = new LivrosController_1.default();
-router.post("/", livrosController.insereLivro);
-router.delete("/", livrosController.deletaLivro);
-router.get("/", livrosController.listarLivros);
-router.put("/", livrosController.atualizaLivro);
-exports.default = router;
+RouterLivros.post("/", livrosController.insereLivro);
+RouterLivros.delete("/", livrosController.deletaLivro);
+RouterLivros.get("/", livrosController.listarLivros);
+RouterLivros.put("/", livrosController.atualizaLivro);
+exports.default = RouterLivros;

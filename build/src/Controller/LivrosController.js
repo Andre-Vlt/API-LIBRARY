@@ -5,8 +5,8 @@ var LivroController = /** @class */ (function () {
     function LivroController() {
     }
     LivroController.prototype.insereLivro = function (req, res) {
-        var _a = req.body, titulo = _a.titulo, anoPublicacao = _a.anoPublicacao, autor = _a.autor, isbn = _a.isbn;
-        var novoLivro = { titulo: titulo, anoPublicacao: anoPublicacao, autor: autor, isbn: isbn };
+        var oLivro = req.body;
+        var novoLivro = oLivro;
         listaLivros.push(novoLivro);
         return res.status(201).json(novoLivro);
     };

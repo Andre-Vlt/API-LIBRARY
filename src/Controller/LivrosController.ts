@@ -6,8 +6,8 @@ let listaLivros: Array<TipoLivro> = [];
 
 export default class LivroController{
     insereLivro(req:Request, res:Response){
-        const {titulo, anoPublicacao, autor, isbn}=req.body as TipoLivro;
-        const novoLivro: TipoLivro = {titulo, anoPublicacao, autor, isbn};
+        const oLivro =req.body as TipoLivro;
+        const novoLivro: TipoLivro = oLivro;
         listaLivros.push(novoLivro);
         return res.status(201).json(novoLivro);
     }

@@ -1,8 +1,8 @@
-import express from "express";
-import livrosRouter from "../Routes/livrosRouter";
+import {Router} from "express";
+import RouterLivros from "../Routes/livrosRouter";
 
-const router = (app: express.Router) => {
-    app.use("/livros", livrosRouter);
-}
+const routes = Router();
 
-export default router;
+routes.use('/livros', RouterLivros);
+
+export default routes;

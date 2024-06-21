@@ -1,15 +1,15 @@
 import express  from "express";
 import LivrosController from "../Controller/LivrosController";
 
-const router = express.Router();
+const RouterLivros = express.Router();
 
 const livrosController = new LivrosController();
-router.post("/", livrosController.insereLivro);
+RouterLivros.post("/", livrosController.insereLivro);
 
-router.delete("/", livrosController.deletaLivro);
+RouterLivros.delete("/", livrosController.deletaLivro);
 
-router.get("/", livrosController.listarLivros);
+RouterLivros.get("/", livrosController.listarLivros);
 
-router.put("/", livrosController.atualizaLivro);
+RouterLivros.put("/", livrosController.atualizaLivro);
 
-export default router;
+export default RouterLivros;
